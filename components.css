@@ -1,0 +1,264 @@
+/* ============================================ */
+/* COMPONENTS - Buttons, Cards, Navigation */
+/* This file contains reusable UI components */
+/* ============================================ */
+
+/* ========== NAVIGATION BAR ========== */
+.navbar {
+    position: fixed; /* Stays at top when scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ========== BUTTONS ========== */
+
+/* Primary CTA Button (Call to Action) */
+.cta-button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--primary-color);
+    color: white;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 16px var(--primary-glow);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+}
+
+.cta-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px var(--primary-glow);
+}
+
+/* Contact/Social Media Buttons */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+/* Individual social media button colors */
+.instagram-btn:hover {
+    border-color: var(--instagram-color);
+    background: var(--instagram-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 48, 108, 0.3);
+}
+
+.discord-btn:hover {
+    border-color: var(--discord-color);
+    background: var(--discord-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.3);
+}
+
+.email-btn:hover {
+    border-color: var(--email-color);
+    background: var(--email-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 168, 83, 0.3);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Show/hide sun/moon based on theme - controlled by JavaScript */
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* ========== PROJECT CARDS ========== */
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-title {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-md);
+    min-height: 60px; /* Keeps cards aligned */
+}
+
+.project-status {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ========== MISSION LIST ========== */
+.mission-list {
+    list-style: none;
+}
+
+.mission-list li {
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mission-list li:last-child {
+    border-bottom: none;
+}
+
+/* Custom checkmark bullet */
+.mission-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ========== RESPONSIVE NAVIGATION ========== */
+/* Simplified mobile navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+    
+    /* Hide theme toggle text on very small screens */
+    .theme-toggle {
+        padding: 6px;
+    }
+}

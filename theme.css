@@ -1,0 +1,134 @@
+/* ============================================ */
+/* THEME STYLES - Dark Mode */
+/* This file handles the dark theme toggle */
+/* ============================================ */
+
+/* ========== DARK MODE VARIABLES ========== */
+/* These variables are applied when body has 'dark-theme' class */
+/* JavaScript in main.js toggles this class */
+
+body.dark-theme {
+    /* Dark Background Colors */
+    --bg-color: #0a0a0a;
+    --bg-secondary: #141414;
+    --text-color: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --border-color: #2a2a2a;
+    --card-bg: #1a1a1a;
+    --nav-bg: rgba(10, 10, 10, 0.95);
+    
+    /* Primary color stays the same but glow is more visible */
+    --primary-glow: rgba(53, 128, 247, 0.5);
+    
+    /* Stronger shadows in dark mode */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ========== DARK MODE SPECIFIC ADJUSTMENTS ========== */
+
+/* Make hero decoration more visible in dark mode */
+body.dark-theme .hero-decoration {
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    opacity: 0.6;
+}
+
+/* Adjust gradient backgrounds for dark mode */
+body.dark-theme .hero-section {
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+}
+
+body.dark-theme .contact-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-color) 100%);
+}
+
+/* Make title gradient pop more in dark mode */
+body.dark-theme .hero-title {
+    background: linear-gradient(135deg, #5ba3ff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Adjust card hover effects for dark mode */
+body.dark-theme .project-card:hover {
+    box-shadow: 0 8px 32px rgba(53, 128, 247, 0.3);
+}
+
+/* Footer in dark mode */
+body.dark-theme .footer {
+    background-color: #000000;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Selection color in dark mode */
+body.dark-theme ::selection {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* ========== THEME TOGGLE ICON SWITCHING ========== */
+/* Show moon icon in light mode, sun icon in dark mode */
+
+/* Light mode (default) - show moon, hide sun */
+body:not(.dark-theme) .theme-toggle .sun-icon {
+    display: none;
+}
+
+body:not(.dark-theme) .theme-toggle .moon-icon {
+    display: block;
+}
+
+/* Dark mode - show sun, hide moon */
+body.dark-theme .theme-toggle .sun-icon {
+    display: block;
+}
+
+body.dark-theme .theme-toggle .moon-icon {
+    display: none;
+}
+
+/* ========== SMOOTH THEME TRANSITION ========== */
+/* All theme-related properties transition smoothly */
+body,
+.navbar,
+.hero-section,
+.about-section,
+.projects-section,
+.contact-section,
+.project-card,
+.mission-box,
+.contact-btn,
+.theme-toggle {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* ========== ACCESSIBILITY ========== */
+/* Ensure sufficient contrast in both themes */
+
+body.dark-theme .section-title {
+    color: var(--text-color);
+}
+
+body.dark-theme .nav-links a {
+    color: var(--text-color);
+}
+
+body.dark-theme .project-title,
+body.dark-theme .mission-title {
+    color: var(--text-color);
+}
+
+/* ========== PREFERENCE DETECTION ========== */
+/* Respect user's system preference if they haven't manually toggled */
+/* This is handled by JavaScript but we provide the styling support */
+
+@media (prefers-color-scheme: dark) {
+    /* If user prefers dark mode, you can set it as default */
+    /* Currently JavaScript handles the default state */
+    /* But this ensures proper rendering */
+}

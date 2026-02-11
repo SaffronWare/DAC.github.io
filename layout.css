@@ -1,0 +1,214 @@
+/* ============================================ */
+/* LAYOUT STYLES - Section Structure */
+/* This file controls the layout of major sections */
+/* ============================================ */
+
+/* ========== SECTION CONTAINERS ========== */
+section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    position: relative;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-color);
+    position: relative;
+}
+
+/* Decorative underline for section titles */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: var(--spacing-sm) auto 0;
+    border-radius: 2px;
+}
+
+/* ========== HERO SECTION LAYOUT ========== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: var(--spacing-md);
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    background: var(--card-bg); /* Fallback if image doesn't load */
+    border: 3px solid var(--primary-color);
+}
+
+.hero-title {
+    margin-bottom: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--primary-color), #5ba3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+/* Decorative animated background element */
+.hero-decoration {
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-50px, -50px) scale(1.1); }
+}
+
+/* ========== ABOUT SECTION LAYOUT ========== */
+.about-section {
+    background-color: var(--bg-secondary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: var(--spacing-md);
+}
+
+.mission-box {
+    background: var(--card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.mission-title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ========== PROJECTS SECTION LAYOUT ========== */
+.projects-section {
+    background-color: var(--bg-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* ========== CONTACT SECTION LAYOUT ========== */
+.contact-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-color) 100%);
+    text-align: center;
+}
+
+.contact-description {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========== FOOTER LAYOUT ========== */
+.footer {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE LAYOUT ========== */
+/* Adjustments for tablets and phones */
+
+@media (max-width: 768px) {
+    /* Stack about section on mobile */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Reduce section padding on mobile */
+    section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    /* Smaller hero decoration on mobile */
+    .hero-decoration {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* Stack contact buttons on mobile */
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller spacing on very small screens */
+    section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .hero-logo {
+        width: 80px;
+        height: 80px;
+    }
+}

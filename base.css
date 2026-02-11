@@ -1,0 +1,141 @@
+/* ============================================ */
+/* BASE STYLES - Typography & Colors */
+/* This file contains the foundational styles */
+/* ============================================ */
+
+/* ========== ROOT VARIABLES ========== */
+/* EDIT THESE to change the entire site's colors */
+:root {
+    /* Primary Brand Color - The main accent color */
+    --primary-color: #3580F7;
+    --primary-hover: #2366d1;
+    --primary-glow: rgba(53, 128, 247, 0.3);
+    
+    /* Light Theme Colors */
+    --bg-color: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-color: #1a1a1a;
+    --text-secondary: #666666;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    
+    /* Accent Colors for Buttons */
+    --instagram-color: #E1306C;
+    --discord-color: #5865F2;
+    --email-color: #34A853;
+    
+    /* Spacing - Used throughout the site */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Border Radius - Rounded corners */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    /* Typography - Font families */
+    --font-display: 'Orbitron', sans-serif; /* Headers - futuristic aerospace feel */
+    --font-body: 'JetBrains Mono', monospace; /* Body text - technical/clean */
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+}
+
+/* ========== RESET & BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling when clicking nav links */
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ========== TYPOGRAPHY ========== */
+/* Headings use the display font for that aerospace tech feel */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive sizing */
+    font-weight: 900;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* Paragraphs */
+p {
+    font-weight: 300;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--text-secondary);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== UTILITY CLASSES ========== */
+/* Add these classes to any element for quick styling */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+/* ========== SELECTION STYLING ========== */
+/* Custom text selection color */
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
