@@ -13,6 +13,32 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/theme.css">
+
+    <style>
+        #sponsors {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .sponsor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sponsor-logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+    </style>
 </head>
 <body>
 
@@ -104,21 +130,17 @@
     </section>
 
     <!-- SPONSORS -->
-    <section id="sponsors" class="about-section">
-        <div class="section-container">
-            <h2 class="section-title">Our Sponsors</h2>
+    <section id="sponsors">
+        <h2 class="section-title">Our Sponsors</h2>
 
-            <div class="about-grid">
-                <div style="grid-column: 1 / -1; text-align: center;">
-                    <img src="assets/dawson-foundation-logo.png"
-                         alt="Dawson Foundation Logo"
-                         class="hero-logo">
+        <div class="sponsor-container">
+            <img src="assets/dawsonfoundation.png"
+                 alt="Dawson Foundation Logo"
+                 class="sponsor-logo">
 
-                    <p>
-                        Funded by the Dawson College Foundation.
-                    </p>
-                </div>
-            </div>
+            <p class="sponsor-text">
+                Funded by the Dawson College Foundation.
+            </p>
         </div>
     </section>
     <!-- CONTACT -->
