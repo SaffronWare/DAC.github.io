@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAC - Dawson Aerospace Club</title>
-    
-    <!-- Google Fonts - Distinctive aerospace-inspired typography -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- CSS Files -->
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/components.css">
@@ -18,23 +16,19 @@
 </head>
 <body>
 
-    <!-- ============================================ -->
-    <!-- NAVIGATION BAR (Sticky) -->
-    <!-- ============================================ -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo/Brand -->
             <div class="nav-brand">DAC</div>
-            
-            <!-- Navigation Links - These scroll to sections -->
+
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Join</a></li>
             </ul>
-            
-            <!-- Dark Mode Toggle Button -->
+
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                 <span class="sun-icon">☀️</span>
                 <span class="moon-icon">🌙</span>
@@ -42,63 +36,45 @@
         </div>
     </nav>
 
-    <!-- ============================================ -->
-    <!-- HERO SECTION -->
-    <!-- TO EDIT: Change the text in the <h1> and <p> tags below -->
-    <!-- ============================================ -->
+    <!-- HERO -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
-            <!-- Club Logo - REPLACE 'assets/logo.svg' with your actual logo path -->
             <img src="assets/logo.jpg" alt="DAC Logo" class="hero-logo">
-            
-            <!-- Main Title -->
+
             <h1 class="hero-title">DAC</h1>
-            
-            <!-- Subtitle -->
             <h2 class="hero-subtitle">Dawson Aerospace Club</h2>
-            
-            <!-- Hero Description - EDIT THIS TEXT -->
+
             <p class="hero-description">
                 Meis Manibus Astra
             </p>
-            
-            <!-- Call to Action Button -->
+
             <a href="#contact" class="cta-button">Join Our Mission</a>
         </div>
-        
-        <!-- Decorative element -->
+
         <div class="hero-decoration"></div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- ABOUT SECTION -->
-    <!-- TO EDIT: Replace the placeholder text in brackets -->
-    <!-- ============================================ -->
+    <!-- ABOUT -->
     <section id="about" class="about-section">
         <div class="section-container">
             <h2 class="section-title">About DAC</h2>
-            
+
             <div class="about-grid">
-                <!-- Left Column: Main Description -->
                 <div class="about-text">
                     <p>
-                        <!-- EDIT THIS PARAGRAPH - Tell your club's story -->
                         The DAC (Dawson Aerospace Club), founded in 2026, aims to propel dawson students into the
                         field of aerospace. We hope to unite students from different programs under interdisciplinary
                         aerospace projects.
                     </p>
                     <p>
-                        <!-- EDIT THIS PARAGRAPH - Additional details -->
-                        At DAC, we hope to sharpen our skills in various fields, weither it be
+                        At DAC, we hope to sharpen our skills in various fields, whether it be
                         engineering, physics, computer science, or design.
                     </p>
                 </div>
-                
-                <!-- Right Column: Mission Points -->
+
                 <div class="mission-box">
                     <h3 class="mission-title">Our Mission</h3>
                     <ul class="mission-list">
-                        <!-- EDIT THESE MISSION POINTS -->
                         <li>Promote aerospace research at Dawson College</li>
                         <li>Give a boost to aspiring student's careers</li>
                         <li>Build a community revolving around aerospace</li>
@@ -109,76 +85,61 @@
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- PROJECTS SECTION -->
-    <!-- TO EDIT: Replace placeholder text in each card -->
-    <!-- ============================================ -->
+    <!-- PROJECTS -->
     <section id="projects" class="projects-section">
         <div class="section-container">
             <h2 class="section-title">Our Projects</h2>
-            
+
             <div class="projects-grid">
-                <!-- Project Card 1 -->
                 <div class="project-card">
                     <div class="project-icon">🚀</div>
-                    <h3 class="project-title">[Refurbishing an RC plane]</h3>
+                    <h3 class="project-title">Refurbishing an RC Plane</h3>
                     <p class="project-description">
                         We are currently working on refurbishing an old RC plane!
                     </p>
                     <div class="project-status">Projects coming soon</div>
                 </div>
-                <!-- 
-                
-                <div class="project-card">
-                    <div class="project-icon">🛰️</div>
-                    <h3 class="project-title">[Project Name 2]</h3>
-                    <p class="project-description">
-                        [Description of your second project. Example: "CanSat satellite competition entry with custom telemetry system."]
-                    </p>
-                    <div class="project-status">Projects coming soon</div>
-                </div>
-                
-                
-                <div class="project-card">
-                    <div class="project-icon">✈️</div>
-                    <h3 class="project-title">[Project Name 3]</h3>
-                    <p class="project-description">
-                        [Description of your third project. Example: "Autonomous drone for aerial mapping and research."]
-                    </p>
-                    <div class="project-status">Projects coming soon</div>
-                </div>
-                -->
             </div>
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- CONTACT / JOIN SECTION -->
-    <!-- TO EDIT: Update the href links with your actual social media -->
-    <!-- ============================================ -->
+    <!-- SPONSORS -->
+    <section id="sponsors" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">Our Sponsors</h2>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <img src="assets/dawsonfoundation.png"
+                     alt="Dawson Foundation Logo"
+                     style="max-width: 250px; height: auto; margin-bottom: 20px;">
+
+                <p>
+                    Funded by the Dawson College Foundation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="contact-section">
         <div class="section-container">
             <h2 class="section-title">Join DAC</h2>
             <p class="contact-description">
-                <!-- EDIT THIS TEXT -->
                 Contact us through any of the channels below!
                 Email: dawsonaeroclub@gmail.com
             </p>
-            
+
             <div class="contact-buttons">
-                <!-- Instagram Button - REPLACE the href with your Instagram URL -->
                 <a href="https://www.instagram.com/dc_aero_club/" target="_blank" class="contact-btn instagram-btn">
                     <span class="btn-icon">📸</span>
                     Instagram
                 </a>
-                
-                <!-- Discord Button - REPLACE the href with your Discord invite link -->
+
                 <a href="https://discord.gg/HCGyXJGg5h" target="_blank" class="contact-btn discord-btn">
                     <span class="btn-icon">💬</span>
                     Discord
                 </a>
-                
-                <!-- Email Button - REPLACE 'your@email.com' with your club email -->
+
                 <a href="mailto:dawsonaeroclub@gmail.com" class="contact-btn email-btn">
                     <span class="btn-icon">✉️</span>
                     Email Us
@@ -187,14 +148,11 @@
         </div>
     </section>
 
-    <!-- ============================================ -->
     <!-- FOOTER -->
-    <!-- ============================================ -->
     <footer class="footer">
         <p>&copy; 2026 Dawson Aerospace Club. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 </html>
